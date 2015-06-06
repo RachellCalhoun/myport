@@ -5,7 +5,7 @@
          <meta name="viewport" content="width=device-width, initial-scale=1">
          <title>Rachell Calhoun</title>
          <link rel="shortcut icon" type="image/x-icon" href="http://www.favicon-generator.org/favicon-generator/htdocs/favicons/2015-04-11/9b70faf47d3f0c13a97b7d14e4c44152.ico" /> 
-	       <link type="text/css" rel="stylesheet" href="{% static 'staticpages/home.css'%}"/>
+	       <link type="text/css" rel="stylesheet" href="{% static 'blog/blog.css'%}"/>
       </head>
       
 <body>
@@ -34,17 +34,23 @@
  
     <div class="row3">
       
-      <div class="col-12"><img src="https://avatars2.githubusercontent.com/u/10239547?v=3&s=460"></div>
+      <div class="col-3"></div>
+      <div class="col-6">
+        {% for entry  in  blogentries %}
+        
+        <h3 class= "title">{{entry.title}}</h3>
+        <img class="images" src="{{entry.img.url}}">
+        <p> {{entry.content}}</p>
+        <p class="resources"><a href="{{entry.resource}}">Resources</a><p>
+        <p class="published"> Published: {{entry.date}}</p>
+       
+        
+       {% endfor %}
+      </div>
+      <div class="col-3"></div>
       
     </div>
-    <div class="row3">
-      <div class="col-4"></div>
-      <div class="col-4">
-        <p>I'm a super human web designer.</p>
-        <p>My name's Rachell. </p>
-      </div>
-      <div class="col-4"></div>
-    </div>
+    
     
   </div>
 </body>
