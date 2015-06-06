@@ -18,4 +18,6 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-]
+    url(r'^home/',TemplateView.as_view(template_name='staticsites/home.html'),name='home'),
+    url(r'^resume/',TemplateView.as_view(template_name='staticsites/resume.html'),name='ourstory'),
+]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
