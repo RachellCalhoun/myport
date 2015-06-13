@@ -6,28 +6,36 @@
          <title>Rachell Calhoun</title>
          <link rel="shortcut icon" type="image/x-icon" href="http://www.favicon-generator.org/favicon-generator/htdocs/favicons/2015-04-11/9b70faf47d3f0c13a97b7d14e4c44152.ico" /> 
 	       <link type="text/css" rel="stylesheet" href="{% static 'blog/blog.css'%}"/>
+         <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
       </head>
       
 <body>
   <div class="grid">
     <div class="row1">
-      <div class="col-3"> 
+      <div class="col-2"> 
         <p class="name">Rachell Calhoun</p>
       </div>
       <div class="col-5">
           <ul class="nav">
-            <li><a href="/home" class="navlink">Home</a></li>
-            <li><a href="/portfolio" class="navlink">Portfolio</a></li>
-            <li><a href="/blog" class="navlink">Blog</a></li>
-            <li><a href="/resume" class="navlink">Resume</a></li>
+            <li><a href="/home" >Home</a></li>
+            <li><a href="/portfolio" >Portfolio</a></li>
+            <li><a href="/blog" >Blog</a></li>
+            <li><a href="/resume" >Resume</a></li>
+          </ul>
+          <p class="menubutton">Menu</p>
+          <ul class="menu">
+            <li><a href="/home" >Home</a></li>
+            <li><a href="/portfolio" >Portfolio</a></li>
+            <li><a href="/blog" >Blog</a></li>
+            <li><a href="/resume" >Resume</a></li>
           </ul>
           
       </div>
-      <div class="col-4">
+      <div class="col-5">
           <ul class="contact">
             <li><a href="https://www.linkedin.com/pub/rachell-calhoun/5a/352/79"> <span><img src="http://upload.wikimedia.org/wikipedia/commons/f/f4/Social_icons-linkedin-22x22.png"></span></a></li>
             <li><a href="mailto:rachell.calhoun@gmail.com"><img src="http://upload.wikimedia.org/wikipedia/commons/6/6d/Gmail-highres_2.png"></a></li>
-            <li><a href="https://github.com/RachellCalhoun"> <span><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/PEO-octocat-1.svg/64px-PEO-octocat-1.svg.png"></span></a></li>
+            <li><a href="https://github.com/RachellCalhoun" class="github"> <span><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/PEO-octocat-1.svg/64px-PEO-octocat-1.svg.png"></span></a></li>
 
           </ul>
       </div>
@@ -35,23 +43,23 @@
  
     <div class="row3">
       
-      <div class="col-3"></div>
-      <div class="col-6">
-      
+      <div class="col-2"></div>
+      <div class="col-8">
+      <div class= "content">
         {% for entry  in  blogentries %}
          
         <h3 class= "title">{{entry.title}}</h3>
         
         {%if entry.img %} <img class = "images" src="{{entry.img.url}}">  {% endif %}
         <p> {{entry.content}}</p>
-        
+        {%if entry.resource%}<a class= "resource" href="entry.resource">{{entry.resource}}</a>{%endif%}
         <p class="published"> Published: {{entry.date}}</p>
-       
+        
         
         {% endfor %}
-
+        </div>
       </div>
-      <div class="col-3"></div>
+      <div class="col-2"></div>
       
     </div>
     
@@ -68,3 +76,12 @@
   </div>
 </footer>
 </html>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.menubutton').on('click', function(){
+      $('.menu').toggle();
+    })
+  })
+
+</script>
