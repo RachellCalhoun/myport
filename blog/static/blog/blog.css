@@ -42,22 +42,33 @@ a:hover{
 }
 
 .contact {
-	
-    margin-right: 2em;
+    
 }
 .contact li {
 	display: inline;
-	padding-top: 23px;
-    padding-bottom: 26px;
-    padding-left: 2em;
-    padding-right: 2em;
-    border-left: 3px solid gray;
-    border-right: 3px solid gray;
+    padding: 3%;
+    
+}
+.mobilecontactbutton{
+    display:none;
+    text-align: left;
+}
+.mobilecontact {
+    display:none;
+    list-style:none;
+    background-color: white;
+    border:1px solid black;
+    border-radius: 10px;
+    position:absolute;
+
 }
 
 
 .contact img {
     max-width: 20px;
+}
+.blog {
+    text-align: center;
 }
 .title {
     font-size: 18;
@@ -76,10 +87,12 @@ a:hover{
     list-style: none;
     background-color: white;
     border: 1px solid black;
-    border-radius: 5px;
+    border-radius: 10px;
+    text-align: center;
+    position:absolute;
 }
 .menu li{
-    padding-top: 1em;
+    padding: 1em;
 }
 .images {
     border-radius:95px;
@@ -181,6 +194,14 @@ a:hover{
     
     .nav {
         display:none;
+    }
+    .contact{
+        display:none;
+    }
+    .mobilecontatbutton {
+        display:block;
+        list-style: none;
+        text-align: center;
     }
     .content {
         max-width: 90%;

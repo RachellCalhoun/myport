@@ -12,7 +12,7 @@
 <body>
   <div class="grid">
     <div class="row1">
-      <div class="col-2"> 
+      <div class="col-3"> 
         <p class="name">Rachell Calhoun</p>
       </div>
       <div class="col-5">
@@ -29,10 +29,17 @@
             <li><a href="/blog" >Blog</a></li>
             <li><a href="/resume" >Resume</a></li>
           </ul>
-          
+        <div class="col-1"></div>
       </div>
-      <div class="col-5">
+      <div class="col-3">
           <ul class="contact">
+            <li><a href="https://www.linkedin.com/pub/rachell-calhoun/5a/352/79"> <span><img src="http://upload.wikimedia.org/wikipedia/commons/f/f4/Social_icons-linkedin-22x22.png"></span></a></li>
+            <li><a href="mailto:rachell.calhoun@gmail.com"><img src="http://upload.wikimedia.org/wikipedia/commons/6/6d/Gmail-highres_2.png"></a></li>
+            <li><a href="https://github.com/RachellCalhoun" class="github"> <span><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/PEO-octocat-1.svg/64px-PEO-octocat-1.svg.png"></span></a></li>
+
+          </ul>
+          <p class="mobilecontactbutton">Contact</p>
+          <ul class="mobilecontact">
             <li><a href="https://www.linkedin.com/pub/rachell-calhoun/5a/352/79"> <span><img src="http://upload.wikimedia.org/wikipedia/commons/f/f4/Social_icons-linkedin-22x22.png"></span></a></li>
             <li><a href="mailto:rachell.calhoun@gmail.com"><img src="http://upload.wikimedia.org/wikipedia/commons/6/6d/Gmail-highres_2.png"></a></li>
             <li><a href="https://github.com/RachellCalhoun" class="github"> <span><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/PEO-octocat-1.svg/64px-PEO-octocat-1.svg.png"></span></a></li>
@@ -46,6 +53,7 @@
       <div class="col-2"></div>
       <div class="col-8">
       <div class= "content">
+      <h2 class="blog">My thoughts on some things</h2>
         {% for entry  in  blogentries %}
          
         <h3 class= "title">{{entry.title}}</h3>
@@ -81,6 +89,14 @@
   $(document).ready(function() {
     $('.menubutton').on('click', function(){
       $('.menu').toggle();
+    })
+  })
+
+</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.mobilecontactbutton').on('click', function(){
+      $('.mobilecontact').toggle();
     })
   })
 
