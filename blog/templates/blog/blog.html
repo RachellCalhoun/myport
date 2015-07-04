@@ -1,103 +1,95 @@
 {% load staticfiles %}
-<!doctype html>
-    <html>
-      <head>
-         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
          <title>Rachell Calhoun</title>
          <link rel="shortcut icon" type="image/x-icon" href="http://www.favicon-generator.org/favicon-generator/htdocs/favicons/2015-04-11/9b70faf47d3f0c13a97b7d14e4c44152.ico" /> 
-	       <link type="text/css" rel="stylesheet" href="{% static 'blog/blog.css'%}"/>
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
          <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+         <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+         <link type="text/css" rel="stylesheet" href="{% static 'blog/blogbs.css'%}"/>
+
       </head>
       
 <body>
-  <div class="grid">
-    <div class="row1">
-      <div class="col-3"> 
-        <p class="name">Rachell Calhoun</p>
-      </div>
-      <div class="col-5">
-          <ul class="nav">
-            <li><a href="/home" >Home</a></li>
-            <li><a href="/portfolio" >Portfolio</a></li>
-            <li><a href="/blog" >Blog</a></li>
-            <li><a href="/resume" >Resume</a></li>
-          </ul>
-          <p class="menubutton">Menu</p>
-          <ul class="menu">
-            <li><a href="/home" >Home</a></li>
-            <li><a href="/portfolio" >Portfolio</a></li>
-            <li><a href="/blog" >Blog</a></li>
-            <li><a href="/resume" >Resume</a></li>
-          </ul>
-        <div class="col-1"></div>
-      </div>
-      <div class="col-3">
-          <ul class="contact">
-            <li><a href="https://www.linkedin.com/pub/rachell-calhoun/5a/352/79"> <span><img src="http://upload.wikimedia.org/wikipedia/commons/f/f4/Social_icons-linkedin-22x22.png"></span></a></li>
-            <li><a href="mailto:rachell.calhoun@gmail.com"><img src="http://upload.wikimedia.org/wikipedia/commons/6/6d/Gmail-highres_2.png"></a></li>
-            <li><a href="https://github.com/RachellCalhoun" class="github"> <span><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/PEO-octocat-1.svg/64px-PEO-octocat-1.svg.png"></span></a></li>
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+  <div class"navbar-header">
+  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" aria-controls="#bs-example-navbar-collapse-1">
+  <a href="#"></a>
+    <span class= "sr-only">Toggle Navigation</span>
+    <span class= "icon-bar"></span>
+    <span class= "icon-bar"></span>
+    <span class= "icon-bar"></span>
+  </button>
+  <a class="navbar-brand col-md-3" href="/home">Rachell Calhoun</a>
+  </div> 
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" aria-expanded="false">
+      <ul class="nav navbar-nav navbar col-md-6">
 
-          </ul>
-          <p class="mobilecontactbutton">Contact</p>
-          <ul class="mobilecontact">
-            <li><a href="https://www.linkedin.com/pub/rachell-calhoun/5a/352/79"> <span><img src="http://upload.wikimedia.org/wikipedia/commons/f/f4/Social_icons-linkedin-22x22.png"></span></a></li>
-            <li><a href="mailto:rachell.calhoun@gmail.com"><img src="http://upload.wikimedia.org/wikipedia/commons/6/6d/Gmail-highres_2.png"></a></li>
-            <li><a href="https://github.com/RachellCalhoun" class="github"> <span><img src="http://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/PEO-octocat-1.svg/64px-PEO-octocat-1.svg.png"></span></a></li>
-
-          </ul>
-      </div>
-    </div>
- 
-    <div class="row3">
+        <li><a href="/home" >Home</a></li>
+        <li><a href="/portfolio" >Portfolio</a></li>
+        <li class ="active"><a href="/blog" >Blog</a></li>
+        <li><a href="/resume" >Resume</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right right">        
+        <li><a href="https://www.linkedin.com/pub/rachell-calhoun/5a/352/79"><span><i class="fa fa-linkedin-square"></i></span></a></li>
+        <li><a href="mailto:rachell.calhoun@gmail.com"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></li>
+        <li><a href="https://github.com/RachellCalhoun" class="github"> <span><i class="fa fa-github"></i>
+</span></a></li>
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
       
-      <div class="col-2"></div>
-      <div class="col-8">
+
+
+
+
+  <div class="container">
+
+    
+ 
+    <div class="row">
+      
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
       <div class= "content">
-      <h2 class="blog">My thoughts on some things</h2>
+      <h1 class="blog">My thoughts on some things</h1>
         {% for entry  in  blogentries %}
          
         <h3 class= "title">{{entry.title}}</h3>
+        <div class="border">
         
-        {%if entry.img %} <img class = "images" src="{{entry.img.url}}">  {% endif %}
-        <p> {{entry.content}}</p>
+        {%if entry.img %} <img class = "img-responsive img-rounded" src="{{entry.img.url}}">  {% endif %}
+        <p class="blogcontent"> {{entry.content}}</p>
         {%if entry.resource%}<a class= "resource" href="entry.resource">{{entry.resource}}</a>{%endif%}
         <p class="published"> Published: {{entry.date}}</p>
         
-        
+        </div>
         {% endfor %}
+
         </div>
       </div>
-      <div class="col-2"></div>
-      
+      <div class="col-md-2"></div>
     </div>
-    
-    
   </div>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 <footer>
   <div class="row4">
-      <div class="col-3"></div>
-      <div class="col-6">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
         <p>All rights reserved by <em>Rachell Calhoun</em></p>
       </div>
-      <div class="col-3"></div>
+      <div class="col-md-3"></div>
   </div>
 </footer>
 </html>
 
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('.menubutton').on('click', function(){
-      $('.menu').toggle();
-    })
-  })
 
-</script>
-<script type="text/javascript">
-  $(document).ready(function() {
-    $('.mobilecontactbutton').on('click', function(){
-      $('.mobilecontact').toggle();
-    })
-  })
 
-</script>

@@ -192,45 +192,5 @@ a:hover{
 
  @media only screen and (max-width:40em) {
     
-    .nav {
-        display:none;
-    }
-    .contact{
-        display:none;
-    }
-    .mobilecontatbutton {
-        display:block;
-        list-style: none;
-        text-align: center;
-    }
-    .content {
-        max-width: 90%;
-        margin:auto;
-        margin-top: 50px;
-    }
-    .images{
-        max-width:100%;
-        display:block;
-    }
-    .row1 {
-        font-size: 1em;
-    }
-    .menubutton{
-        display:block;
-        list-style: none;
-        text-align: center;
-    }
-
-    .col-9{
-        width:100%;
-    }
-    .col-8 {
-        width:100%;
-    }
-    .title{
-        margin:auto;
-        font-size: 1.5em;
-        padding-top: 1em;
-        padding-bottom: 1em;
-    }
- }
+    
+    
