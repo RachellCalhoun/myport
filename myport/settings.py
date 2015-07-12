@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'staticpages',
     'portfolio',
     'blog',
+    'skills',
 )
 
 MIDDLEWARE_CLASSES = (

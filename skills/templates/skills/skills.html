@@ -10,7 +10,7 @@
          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
          <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
          <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-         <link type="text/css" rel="stylesheet" href="{% static 'staticpages/resume.css'%}"/>
+         <link type="text/css" rel="stylesheet" href="{% static 'skills/skills.css'%}"/>
 
       </head>
       
@@ -32,8 +32,8 @@
 
         <li ><a href="/home" >Home</a></li>
         <li><a href="/portfolio" >Portfolio</a></li>
+        <li  class ="active"><a href="/skills" >Skills</a></li>
         <li><a href="/blog" >Blog</a></li>
-        <li  class ="active"><a href="/resume" >Skills</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right right">        
         <li><a href="https://www.linkedin.com/pub/rachell-calhoun/5a/352/79"><span><i class="fa fa-linkedin-square" alt="LinkedIn"></i></span></a></li>
@@ -46,19 +46,39 @@
   </div><!-- /.container-fluid -->
 </nav>
   <div class="container"> <!--/full width of page -->
-    <div class="title"><h2>My Skills</h2>
-    </div>
-    <div class="row maincontent">
-      <div class="col-md-1"></div>
-      <div class="col-md-5 left-content">
-      <h3>Something here</h3>
-      </div><!--close left-content-->
-      <div class="col-md-5 right-content">
-      <h3>something else here</h3>
-      </div><!--close left-content-->
-      <div class="col-md-1"></div>
-    </div>
-  </div>
+    <h2 class="title">My Skills</h2>
+    {% for entry  in  skillentries %}
+        {% if forloop.counter0|divisibleby:2 %}
+      <div class="row">
+        <div class="col-md-1">
+        </div>
+        <div class="col-md-5 skillcontents">
+
+          <h3 class= "title">{{entry.title}}</h3>
+
+          {%if entry.img %} <img class="img-responsive img-rounded skillsimage" src="{{entry.img.url}}">{% endif %}
+          <p class="skilldescription"> {{entry.description}}</p>
+          {%if entry.resource%}<a class= "resource" href="entry.resource">{{entry.resource}}</a>{%endif%}
+          <p></p>
+        
+        </div><!--closing col-md-5-->
+        {% else %}
+        <div class="col-md-5 skillcontents">
+          <h3 class= "title">{{entry.title}}</h3>
+          {%if entry.img %} <img class="img-responsive img-rounded skillsimage" src="{{entry.img.url}}">{% endif %}
+          <p class="skilldescription"> {{entry.description}}</p>
+          {%if entry.resource%}<a class= "resource" href="entry.resource">{{entry.resource}}</a>{%endif%}
+          <p></p>
+        </div><!--closing coldmd5 div-->
+        {%endif%}
+        {% endfor %}
+        
+        
+        
+        <div class="col-md-1">
+        </div>
+      </div><!--close row-->
+    </div><!--close container-->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     
     

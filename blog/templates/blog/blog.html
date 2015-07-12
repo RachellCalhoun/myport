@@ -32,8 +32,8 @@
 
         <li><a href="/home" >Home</a></li>
         <li><a href="/portfolio" >Portfolio</a></li>
+        <li><a href="/skills" >Skills</a></li>
         <li class ="active"><a href="/blog" >Blog</a></li>
-        <li><a href="/resume" >Resume</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right right">        
         <li><a href="https://www.linkedin.com/pub/rachell-calhoun/5a/352/79"><span><i class="fa fa-linkedin-square"></i></span></a></li>
@@ -45,21 +45,13 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-      
-
-
-
-
   <div class="container">
-
-    
- 
     <div class="row">
       
       <div class="col-md-2"></div>
-      <div class="col-md-8">
-      <div class= "content">
-      <h1 class="blog">My thoughts on some things</h1>
+      <div class="col-md-8 content">
+      
+        <h1 class="blog">My thoughts on some things</h1>
         {% for entry  in  blogentries %}
          
         <h3 class= "title">{{entry.title}}</h3>
@@ -73,11 +65,10 @@
         </div>
         {% endfor %}
 
-        </div>
-      </div>
+      </div><!--close row-->
       <div class="col-md-2"></div>
     </div>
-  </div>
+  </div><!--close container-->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 <footer>

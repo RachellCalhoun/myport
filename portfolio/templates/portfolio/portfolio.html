@@ -32,8 +32,8 @@
 
         <li><a href="/home" >Home</a></li>
         <li  class ="active"><a href="/portfolio" >Portfolio</a></li>
+        <li><a href="/skills" >Skills</a></li>
         <li><a href="/blog" >Blog</a></li>
-        <li><a href="/resume" >Resume</a></li>
       </ul>
       <ul class="nav navbar-nav navbar-right right">        
         <li><a href="https://www.linkedin.com/pub/rachell-calhoun/5a/352/79"><span><i class="fa fa-linkedin-square" alt="LinkedIn"></i></span></a></li>
@@ -46,32 +46,41 @@
   </div><!-- /.container-fluid -->
 </nav>
  
-    <div class="row">
+    <div class="container">
+    {% for entry  in  entries %}
+         
+        <h3 class= "title ">{{entry.title}}</h3>
+      <div class="row portcontent">
       
-      <div class="col-md-12"><img src="https://avatars2.githubusercontent.com/u/10239547?v=3&s=460" class ="img-responsive img-circle portimage" alt ="Rachell Calhoun"></div>
-      
-    </div>
-    <div class="row">
-      <div class="col-md-4"></div>
-      <div class="col-md-4 text-center">
-        <p>Prtfolio site put some work up!!!</p>
-        <p>My name's Rachell. </p>
-      </div>
-      <div class="col-md-4"></div>
-    </div>
-    
-  </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-3">
+        {%if entry.img %} <img class = "img-responsive img-circle imageentry" src="{{entry.img.url}}">  {% endif %}
+        </div>
+        <div class="col-md-7 portdescription">
+        <p> {{entry.description}}</p>
+        {%if entry.resource%}<a class= "resource" href="https://entry.resource">{{entry.resource}}</a>{%endif%}
+        <p class="published"> Date: {{entry.date}}</p>
+        </div>
+        <div class="col-md-1"></div>
+        {% endfor %}
+        
+      </div><!--close row-->
+    </div><!--close container-->
+  
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 </body>
 <footer>
-  <div id="footer" class="container">
-    <nav class="navbar navbar-default navbar-fixed-bottom">
+  <div id="footer" >
+    <nav class="navbar navbar-default navbar-bottom ">
         <div class="navbar-inner navbar-content-center">
-      <div class="col-md-12 text-center">
+      <div class="col-md-6 text-center">
       <p></p>
-        <p>All rights reserved by <i class="fa fa-hand-o-right"></i>
-<em> Rachell Calhoun </em><i class="fa fa-hand-o-left"></i>
+        <p>All rights reserved by <em> Rachell Calhoun </em><i class="fa fa-heart"></i>
 </p>
+      </div>
+      <div class="col-md-6 text-center">
+      <p></p>
+        <p>A bit thanks to Hassan Abid and Jin Park for all the help along the way. </p>
       </div>
       </div>
   </div>
