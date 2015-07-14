@@ -45,26 +45,27 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
- 
-    <div class="container">
     {% for entry  in  entries %}
-         
+    <div class="container">
+    
+         <div class="row ">
         <h3 class= "title ">{{entry.title}}</h3>
-      <div class="row portcontent">
       
-        <div class="col-md-1"></div>
-        <div class="col-md-3">
+      <div class="col-md-1"></div>
+      
+        <div class="col-md-8 portcontent">
         {%if entry.img %} <img class = "img-responsive img-circle imageentry" src="{{entry.img.url}}">  {% endif %}
-        </div>
-        <div class="col-md-7 portdescription">
+        
+        <div class="portdescription">
         <p> {{entry.description}}</p>
         {%if entry.resource%}<a class= "resource" href="https://entry.resource">{{entry.resource}}</a>{%endif%}
         <p class="published"> Date: {{entry.date}}</p>
         </div>
-        <div class="col-md-1"></div>
+      </div>
+        </div><!--close row-->
         {% endfor %}
         
-      </div><!--close row-->
+      
     </div><!--close container-->
   
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>

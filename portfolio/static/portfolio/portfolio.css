@@ -18,17 +18,19 @@
 .imageentry {
 	max-height: 200px;
 	float:left;
-	padding:1em;
+	padding:1.5em;
 }
 .title{
 	padding:.5em;
 }
 .portdescription{
 	position:relative;
-	padding-top:1em;
+	padding-top:2em;
 }
 .portcontent{
 	border:solid black 1px;
 	border-radius: 5px;
 	margin-bottom: 2em;
+	margin:2em;
+	overflow:auto;
 }

@@ -57,7 +57,7 @@
         <h3 class= "title">{{entry.title}}</h3>
         <div class="border">
         
-        {%if entry.img %} <img class = "img-responsive img-rounded" src="{{entry.img.url}}">  {% endif %}
+        {%if entry.img %} <img class = "img-responsive img-rounded blogimage" src="{{entry.img.url}}">  {% endif %}
         <p class="blogcontent"> {{entry.content}}</p>
         {%if entry.resource%}<a class= "resource" href="entry.resource">{{entry.resource}}</a>{%endif%}
         <p class="published"> Published: {{entry.date}}</p>
