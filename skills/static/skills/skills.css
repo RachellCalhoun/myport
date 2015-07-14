@@ -6,6 +6,7 @@
 #footer{
     height:1em;
 }
+
 .portimage{
     max-width: 20%;
     margin: auto;
@@ -18,11 +19,14 @@
 	float:left;
 	margin-right:	.5em;
 	margin-bottom: .3em;
+	padding:.5em;
+
 }
 .skillcontents{
 	border:solid gray 1px;
 	border-radius: 5px;
 	margin-bottom:2em;
+	overflow:auto;
 	
 }
 .skilldescription{
