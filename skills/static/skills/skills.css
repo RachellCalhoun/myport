@@ -13,11 +13,28 @@
     margin-bottom: 4em;
 }
 .skillsimage{
-	max-height: 150px;
-	padding:1em;
+	max-width: 75px;
+	max-height: 75px;
+	float:left;
+	margin-right:	.5em;
+	margin-bottom: .3em;
 }
 .skillcontents{
 	border:solid gray 1px;
 	border-radius: 5px;
-	margin:1em;
+	margin-bottom:2em;
+	
 }
+.skilldescription{
+	position:relative;
+	
+}
+.title {
+	position:relative;
+	margin-bottom: 0em;
+ 	margin-top: .3em;
+}
+.pagetitle{
+	margin:2em;
+}
+

@@ -46,37 +46,38 @@
   </div><!-- /.container-fluid -->
 </nav>
   <div class="container"> <!--/full width of page -->
-    <h2 class="title">My Skills</h2>
+    <h2 class="pagetitle">My Skills</h2>
     {% for entry  in  skillentries %}
         {% if forloop.counter0|divisibleby:2 %}
       <div class="row">
-        <div class="col-md-1">
-        </div>
-        <div class="col-md-5 skillcontents">
+        <div class="col-md-1"></div>
+        <div class="col-md-4 skillcontents">
 
-          <h3 class= "title">{{entry.title}}</h3>
+          <h3 class= "title text-center">{{entry.title}}</h3>
 
-          {%if entry.img %} <img class="img-responsive img-rounded skillsimage" src="{{entry.img.url}}">{% endif %}
+          {%if entry.img %} <img class="img-responsive img-circle skillsimage" src="{{entry.img.url}}">{% endif %}
           <p class="skilldescription"> {{entry.description}}</p>
           {%if entry.resource%}<a class= "resource" href="entry.resource">{{entry.resource}}</a>{%endif%}
           <p></p>
         
         </div><!--closing col-md-5-->
+        <div class="col-md-1"></div>
         {% else %}
-        <div class="col-md-5 skillcontents">
-          <h3 class= "title">{{entry.title}}</h3>
-          {%if entry.img %} <img class="img-responsive img-rounded skillsimage" src="{{entry.img.url}}">{% endif %}
+        <div class="col-md-4 skillcontents">
+          <h3 class= "title text-center">{{entry.title}}</h3>
+          {%if entry.img %} <img class="img-responsive img-circle skillsimage" src="{{entry.img.url}}">{% endif %}
           <p class="skilldescription"> {{entry.description}}</p>
           {%if entry.resource%}<a class= "resource" href="entry.resource">{{entry.resource}}</a>{%endif%}
           <p></p>
         </div><!--closing coldmd5 div-->
+
+        </div>
         {%endif%}
         {% endfor %}
         
         
         
-        <div class="col-md-1">
-        </div>
+        
       </div><!--close row-->
     </div><!--close container-->
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
