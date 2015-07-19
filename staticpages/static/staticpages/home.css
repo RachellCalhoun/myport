@@ -5,6 +5,8 @@
 body {
   padding-bottom: 40px;
   color: #5a5a5a;
+  
+
 }
 
 
@@ -42,11 +44,14 @@ body {
 }
 .portimage{
   max-height: 250px;
-  margin-bottom: 50px;
+  padding: 2em;
   margin:auto;
 
 }
-
+.main {
+  height:100%;
+  padding:2em;
+}
 
 /*_------------------------------footer----------*/
 .footer{
@@ -68,9 +73,7 @@ body {
 
 .footer li a{
   float: right;
-  padding-top:15px;
-  padding-bottom:15px;
-  padding-left:15px;
+  padding:.5em;
 
 }
 .footer a:hover{
@@ -105,4 +108,8 @@ body {
     border-radius: 4px;
   }
 }
-
+@media(max-width: 640px){
+  .footer ul{
+    display:none;
+  }
+}

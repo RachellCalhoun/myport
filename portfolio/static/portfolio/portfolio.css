@@ -43,14 +43,14 @@ body {
 
 /* Center align the text within the three columns below the carousel */
 .title{
-	padding:1em;
+	padding:0px;
 }
 
 /* Featurettes
 ------------------------- */
 
 .featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+  margin: 40px 0; /* Space out the Bootstrap <hr> more */
 }
 
 /* Thin out the marketing headings */
@@ -61,6 +61,7 @@ body {
 }
 .featurette-image{
 	max-height: 250px;
+	margin-top:20px;
 }
 
 /*_------------------------------footer----------*/
@@ -81,9 +82,10 @@ body {
 	color:#9D9D9D;
 }
 
-.footer ul{
-	float: right;
-	padding:.5em;
+.footer li a{
+  float: right;
+  padding:.5em;
+  padding-bottom:0px;
 }
 .footer a:hover{
 	color:white;
@@ -92,6 +94,7 @@ body {
 .footer p{
 	float:left;
 	padding:.5em;
+	padding-bottom:0px;
 }
 
 
@@ -124,6 +127,14 @@ body {
 
 @media (min-width: 992px) {
   .featurette-heading {
-    margin-top: 120px;
+    margin-top: 60px;
   }
+  .featurette-image{
+  	margin-top:60px;
+  }
+}
+@media(max-width: 640px){
+	.footer ul{
+		display:none;
+	}
 }
