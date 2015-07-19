@@ -93,7 +93,7 @@
           {%if entry.img %}<img class="img-circle" src="{{entry.img.url}}" alt="Generic placeholder image" width="140" height="140">{% endif %}
           <h2>{{entry.title}}</h2>
           <p>{{entry.description}}</p>
-          {%if entry.resource%}<p><a class= "resource" href="entry.resource">{{entry.resource}}</a></p>{%endif%}
+          {%if entry.resource%}<p><a class= "resource" href="{{entry.resource}}">{{entry.resource}}</a></p>{%endif%}
         </div><!-- /.col-lg-6 -->
         <div cass="col-lg-4"></div>
         {% else %}
@@ -101,13 +101,14 @@
           {%if entry.img %}<img class="img-circle" src="{{entry.img.url}}" alt="Generic placeholder image" width="140" height="140">{% endif %}
           <h2>{{entry.title}}</h2>
           <p>{{entry.description}}</p>
-          {%if entry.resource%}<p><a class= "resource" href="entry.resource">{{entry.resource}}</a></p>{%endif%}
+          {%if entry.resource%}<p><a class= "resource" href="{{entry.resource}}">{{entry.resource}}</a></p>{%endif%}
         </div><!-- /.col-lg-6 -->
         <div class="col-lg-2"></div>
 
       </div><!-- /.row -->
       {%endif%}
       {% endfor %}
+      </div>
 
       <!-- START THE FEATURETTES -->
 
