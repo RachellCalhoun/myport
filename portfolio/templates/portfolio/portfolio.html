@@ -8,7 +8,7 @@
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <meta name="description" content="">
     <meta name="author" content="">
-    <link rel="shortcut icon" type="image/x-icon" href="http://www.favicon-generator.org/favicon-generator/htdocs/favicons/2015-04-11/9b70faf47d3f0c13a97b7d14e4c44152.ico" /> 
+    <link rel="shortcut icon" type="image/x-icon" href="http://www.favicon-generator.org/favicon-generator/htdocs/favicons/2015-04-11/9b70faf47d3f0c13a97b7d14e4c44152.ico" />
 
     <title>Rachell Calhoun</title>
 
@@ -56,12 +56,12 @@
                 <li><a href="/skills" >Skills</a></li>
                 <li><a href="/blog" >Blog</a></li>
               </ul>
-              <ul class="nav navbar-nav navbar-right right">        
+              <ul class="nav navbar-nav navbar-right right">
                 <li><a href="https://www.linkedin.com/pub/rachell-calhoun/5a/352/79"><span><i class="fa fa-linkedin-square" alt="LinkedIn"></i></span></a></li>
                 <li><a href="mailto:rachell.calhoun@gmail.com"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></li>
                 <li><a href="https://github.com/RachellCalhoun" class="github"> <span><i class="fa fa-github" alt ="Github"></i>
         </span></a></li>
-              
+
               </ul>
             </div>
           </div>
@@ -87,7 +87,19 @@
       <!-- START THE FEATURETTES -->
 
       {% for entry  in  entries %}
-       {% if forloop.counter0|divisibleby:2 %}
+      {% if forloop.first %}
+      <hr class="featurette-divider">
+     <div class="row featurette">
+       <div class="col-md-7">
+         <h2 class="featurette-heading">{{entry.title}} <span class="text-muted"></span></h2>
+         <p class="lead">{{entry.description}}</p>
+         {%if entry.resource%}<a class= "resource" href="{{entry.resource}}">{{entry.resource}}</a>{%endif%}
+       </div>
+       <div class="col-md-5">
+         {%if entry.img %} <img class = "featurette-image img-responsive img-circle center-block " src="{{entry.img.url}}">  {% endif %}
+       </div>
+     </div>
+       {% elif forloop.counter0|divisibleby:2 %}
        <hr class="featurette-divider">
       <div class="row featurette">
         <div class="col-md-7">
@@ -96,7 +108,7 @@
           {%if entry.resource%}<a class= "resource" href="{{entry.resource}}">{{entry.resource}}</a>{%endif%}
         </div>
         <div class="col-md-5">
-          {%if entry.img %} <img class = "featurette-image img-responsive img-circle center-block " src="{{entry.img.url}}">  {% endif %}
+          {%if entry.img %} <img class = "featurette-image img-responsive center-block " src="{{entry.img.url}}">  {% endif %}
         </div>
       </div>
       {% else %}
@@ -109,7 +121,7 @@
           {%if entry.resource%}<a class= "resource" href="{{entry.resource}}">{{entry.resource}}</a>{%endif%}
         </div>
         <div class="col-md-5 col-md-pull-7">
-          {%if entry.img %} <img class = "featurette-image img-responsive img-circle center-block " src="{{entry.img.url}}">  {% endif %}
+          {%if entry.img %} <img class = "featurette-image img-responsive center-block " src="{{entry.img.url}}">  {% endif %}
         </div>
       </div>
       {%endif%}
@@ -125,7 +137,7 @@
               <div class="col-md-12">
                 <!--<p class="text-left ">Thanks to <a href="http://jinpark.net">Jin</a> and <a href="http://www.hassanabid.com">Hassan</a></p>-->
                 <p class="text-left"> Made by <a href="http://www.rachellcalhoun.com">Rachell Calhoun</a> using bootstrap</p>
-              
+
               <ul class="text-right list-inline" style="none">
                 <li><a href="https://www.linkedin.com/pub/rachell-calhoun/5a/352/79"><span><i class="fa fa-linkedin-square" alt="LinkedIn"></i></span></a></li>
                 <li><a href="mailto:rachell.calhoun@gmail.com"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></li>
@@ -144,12 +156,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    
+
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!--<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
   </body>
 </html>
-
-
-
-
