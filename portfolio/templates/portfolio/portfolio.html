@@ -87,19 +87,7 @@
       <!-- START THE FEATURETTES -->
 
       {% for entry  in  entries %}
-      {% if forloop.first %}
-      <hr class="featurette-divider">
-     <div class="row featurette">
-       <div class="col-md-7">
-         <h2 class="featurette-heading">{{entry.title}} <span class="text-muted"></span></h2>
-         <p class="lead">{{entry.description}}</p>
-         {%if entry.resource%}<a class= "resource" href="{{entry.resource}}">{{entry.resource}}</a>{%endif%}
-       </div>
-       <div class="col-md-5">
-         {%if entry.img %} <img class = "featurette-image img-responsive img-circle center-block " src="{{entry.img.url}}">  {% endif %}
-       </div>
-     </div>
-       {% elif forloop.counter0|divisibleby:2 %}
+       {% if forloop.counter0|divisibleby:2 %}
        <hr class="featurette-divider">
       <div class="row featurette">
         <div class="col-md-7">
