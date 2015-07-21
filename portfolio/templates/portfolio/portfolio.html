@@ -59,8 +59,7 @@
               <ul class="nav navbar-nav navbar-right right">
                 <li><a href="https://www.linkedin.com/pub/rachell-calhoun/5a/352/79"><span><i class="fa fa-linkedin-square" alt="LinkedIn"></i></span></a></li>
                 <li><a href="mailto:rachell.calhoun@gmail.com"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></li>
-                <li><a href="https://github.com/RachellCalhoun" class="github"> <span><i class="fa fa-github" alt ="Github"></i>
-        </span></a></li>
+                <li><a href="https://github.com/RachellCalhoun" class="github"> <span><i class="fa fa-github" alt ="Github"></i></span></a></li>
 
               </ul>
             </div>
@@ -80,15 +79,16 @@
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
-    <div class="container">
+    <hr class="featurette-divider long"></hr>
       <h1 class="title text-center">Projects and MOOCS</h1>
-
+      {% for entry  in  entries %}
+      <div class="container">
       <!-- Three columns of text below the carousel -->
       <!-- START THE FEATURETTES -->
 
-      {% for entry  in  entries %}
+      
        {% if forloop.counter0|divisibleby:2 %}
-       <hr class="featurette-divider">
+       <hr class="featurette-divider"></hr>
       <div class="row featurette">
         <div class="col-md-7">
           <h2 class="featurette-heading">{{entry.title}} <span class="text-muted"></span></h2>
@@ -96,13 +96,16 @@
           {%if entry.resource%}<a class= "resource" href="{{entry.resource}}">{{entry.resource}}</a>{%endif%}
         </div>
         <div class="col-md-5">
-          {%if entry.img %} <img class = "featurette-image img-responsive center-block " src="{{entry.img.url}}">  {% endif %}
+          {%if entry.img %} <a href="#" id="pop"> <img id="imageresource" class = "featurette-image img-responsive center-block " src="{{entry.img.url}}"> click to enlarage</a>{% endif %}
         </div>
       </div>
+
+
       {% else %}
-      <hr class="featurette-divider">
+      
 
       <div class="row featurette">
+      <hr class="featurette-divider"></hr>
         <div class="col-md-7 col-md-push-5">
           <h2 class="featurette-heading">{{entry.title}} <span class="text-muted"></span></h2>
           <p class="lead">{{entry.description}}</p>
@@ -112,14 +115,34 @@
           {%if entry.img %} <img class = "featurette-image img-responsive center-block " src="{{entry.img.url}}">  {% endif %}
         </div>
       </div>
+      </div>
       {%endif%}
       {% endfor %}
-      <hr class="featurette-divider">
-
+      
+<!-- Creates the bootstrap modal where the image will appear -->
+      <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              <h4 class="modal-title" id="myModalLabel">Image preview</h4>
+            </div>
+            <div class="modal-body">
+              <img src="" class="imagepreview" style="width: 400px; height: 264px;" >
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+        </div>
+      </div>
       <!-- /END THE FEATURETTES -->
-
+      <hr class="featurette-divider long"></hr>
 
       <!-- FOOTER -->
+      <div class="container"
       <footer>
        <div class="row footer">
               <div class="col-md-12">
@@ -144,7 +167,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-
+    <script>$("#pop").on("click", function() {
+   $('.imagepreview').attr('src', $('.pop img').attr('src')); // here asign the image to the modal when the user click the enlarge link
+   $('#imagemodal').modal('show'); // imagemodal is the id attribute assigned to the bootstrap modal, then i use the show function
+});</script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!--<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
   </body>

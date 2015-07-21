@@ -36,28 +36,6 @@ body {
 /* CUSTOMIZE THE CAROUSEL
 -------------------------------------------------- */
 
-/* Carousel base class */
-.carousel {
-  height: 500px;
-  margin-bottom: 60px;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-  z-index: 10;
-}
-
-/* Declare heights because of positioning of img element */
-.carousel .item {
-  height: 500px;
-  background-color: #777;
-}
-.carousel-inner > .item > img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  min-width: 100%;
-  height: 500px;
-}
 
 
 /* MARKETING CONTENT
@@ -65,7 +43,7 @@ body {
 
 /* Center align the text within the three columns below the carousel */
 .title{
-	padding:1em;
+	
 }
 .marketing .col-lg-4 {
   margin-bottom: 20px;
@@ -80,6 +58,8 @@ body {
 }
 /*---FOOTER---------------------------------------------------*/
 .footer{
+   padding-top: 10px;
+  margin-top:10px;
   background-color: #101010;
   background-image: -moz-linear-gradient(top, #222222, #111111);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));
@@ -112,7 +92,7 @@ body {
 ------------------------- */
 
 .featurette-divider {
-  margin: 80px 0; /* Space out the Bootstrap <hr> more */
+  margin: 10px; /* Space out the Bootstrap <hr> more */
 }
 
 /* Thin out the marketing headings */

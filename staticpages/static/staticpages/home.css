@@ -10,6 +10,9 @@ body {
 }
 
 
+.featurette-divider {
+  margin: 10px ; /* Space out the Bootstrap <hr> more */
+}
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
@@ -55,6 +58,8 @@ body {
 
 /*_------------------------------footer----------*/
 .footer{
+  padding-top: 10px;
+  margin-top:10px;
   background-color: #101010;
   background-image: -moz-linear-gradient(top, #222222, #111111);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#222222), to(#111111));

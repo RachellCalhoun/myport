@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" type="image/x-icon" href="http://www.favicon-generator.org/favicon-generator/htdocs/favicons/2015-04-11/9b70faf47d3f0c13a97b7d14e4c44152.ico" /> 
-    <title>Cover Template for Bootstrap</title>
+    <title>Rachell Calhoun</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
@@ -65,14 +65,16 @@
 
       </div><!--container-->
     </div><!--navbar wrapper-->
-
+      <hr class="featurette-divider"></hr>
+      <h1 class="blog text-center">My thoughts on some things</h1>
         <div class="container main">
+        <hr class="featurette-divider"></hr>
     <div class="row">
       
       <div class="col-md-2"></div>
       <div class="col-md-8 content">
       
-        <h1 class="blog">My thoughts on some things</h1>
+        
         {% for entry  in  blogentries %}
          
         <h3 class= "title">{{entry.title}}</h3>
@@ -90,6 +92,7 @@
       <div class="col-md-2"></div>
     </div>
   </div><!--close container-->
+      <hr class="featurette-divider"></hr>
         <div class="container">
           <footer>
             <div class="row footer">
