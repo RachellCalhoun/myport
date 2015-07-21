@@ -42,7 +42,12 @@ body {
   max-height: 250px;
   padding: 2em;
   margin:auto;
-
+}
+.blogcontent{
+    padding:1em;
+}
+.published{
+    padding-left:1em;
 }
 .main {
   min-height:400px;
