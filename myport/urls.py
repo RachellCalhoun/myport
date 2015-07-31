@@ -24,6 +24,6 @@ urlpatterns = [
     url(r'^blog/', include('blog.urls')),
     url(r'^portfolio/', include('portfolio.urls')),
     url(r'^skills/', include('skills.urls')),
-    url(r'^home/',TemplateView.as_view(template_name='staticpages/home.html'),name='home'),
+    url(r'^$',TemplateView.as_view(template_name='staticpages/home.html'),name='home'),
     url(r'^resume/',TemplateView.as_view(template_name='staticpages/resume.html'),name='resume'),
 ]+ static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)
