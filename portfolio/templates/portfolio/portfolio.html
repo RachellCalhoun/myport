@@ -46,12 +46,12 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
               </button>
-              <a class="navbar-brand" href="/home">Rachell Calhoun</a>
+              <a class="navbar-brand" href="/">Rachell Calhoun</a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar col-md-6">
 
-                <li><a href="/home" >Home</a></li>
+                <li><a href="/" >Home</a></li>
                 <li  class ="active"><a href="/portfolio" >Portfolio</a></li>
                 <li><a href="/skills" >Skills</a></li>
                 <li><a href="/blog" >Blog</a></li>
@@ -86,7 +86,7 @@
       <!-- Three columns of text below the carousel -->
       <!-- START THE FEATURETTES -->
 
-      
+
        {% if forloop.counter0|divisibleby:2 %}
        <hr class="featurette-divider"></hr>
       <div class="row featurette">
@@ -132,13 +132,13 @@
           </div><!--close modal content-->
         </div><!--close modal dialog-->
       </div><!--close div id mymodal-->
-  
+
       </div><!--close container-->
       {%endif%}
       {% endfor %}
-      
 
-      
+
+
       <hr class="featurette-divider long"></hr>
 
       <!-- FOOTER -->
@@ -167,12 +167,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
-    
+
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <!--<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
     <script>$('featurette-image').click(function (e) {
     $('#myModal img').attr('src', $(this).attr('src'));
 });</script>
-  
+
   </body>
 </html>
