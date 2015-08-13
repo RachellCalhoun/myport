@@ -68,28 +68,24 @@
 
       </div>
     </div>
-
-
     <!-- Carousel
     ================================================== -->
     <!-- /.carousel -->
     <!--content-->
-
-
     <!-- Marketing messaging and featurettes
     ================================================== -->
     <!-- Wrap the rest of the page in another container to center all the content. -->
-    <hr class="featurette-divider long"></hr>
-      <h1 class="title text-center">Projects and MOOCS</h1>
-      {% for entry  in  entries %}
-      <div class="container">
+    <hr class="featurette-divider"></hr>
+
+    <h1 class="title text-center">Projects and MOOCS</h1>
+       <div class="container">
+        {% for entry  in  entries %}
+    
       <!-- Three columns of text below the carousel -->
       <!-- START THE FEATURETTES -->
-
-
        {% if forloop.counter0|divisibleby:2 %}
-       <hr class="featurette-divider"></hr>
-      <div class="row featurette">
+      <hr class="featurette-divider"></hr>
+      <div class="row">
         <div class="col-md-7">
           <h2 class="featurette-heading">{{entry.title}} <span class="text-muted"></span></h2>
           <p class="lead">{{entry.description}}</p>
@@ -98,46 +94,50 @@
         <div class="col-md-5">
           {%if entry.img %}  <img class = "featurette-image img-responsive center-block"  src="{{entry.img.url}}"></a> {% endif %}
         </div><!--close col5-->
-        </div><!--closerow-->
+      </div><!--closerow-->
 
       {% else %}
-      <div class="row featurette">
-      <hr class="featurette-divider"></hr>
-        <div class="col-md-7 col-md-push-5">
-          <h2 class="featurette-heading">{{entry.title}} <span class="text-muted"></span></h2>
-          <p class="lead">{{entry.description}}</p>
-          {%if entry.resource%}<a class= "resource" href="{{entry.resource}}">{{entry.resource}}</a>{%endif%}
-        </div>
-        <div class="col-md-5 col-md-pull-7">
-          {%if entry.img %} <img class = "featurette-image img-responsive center-block " src="{{entry.img.url}}">  {% endif %}
-        </div><!--close col 7/5-->
+      <div class="row">
+        <hr class="featurette-divider"></hr>
+          <div class="col-md-7 col-md-push-5">
+            <h2 class="featurette-heading">{{entry.title}} <span class="text-muted"></span></h2>
+            <p class="lead">{{entry.description}}</p>
+            {%if entry.resource%}<a class= "resource" href="{{entry.resource}}">{{entry.resource}}</a>{%endif%}
+          </div>
+          <div class="col-md-5 col-md-pull-7">
+            {%if entry.img %} <img class = "featurette-image img-responsive center-block " src="{{entry.img.url}}">  {% endif %}
+          </div><!--close col 7/5-->
       </div><!--close row-->
-      </div><!--close container-->
+     
       {%endif%}
       {% endfor %}
+      </div>
+    </div><!--close main container-->
 
+    <hr class="featurette-divider"></hr>
+    
 
-
-      <hr class="featurette-divider long"></hr>
+      
 
       <!-- FOOTER -->
-      <div class="container">
-      <footer>
-       <div class="row footer">
-              <div class="col-md-12">
-                <!--<p class="text-left ">Thanks to <a href="http://jinpark.net">Jin</a> and <a href="http://www.hassanabid.com">Hassan</a></p>-->
+      
+      <div class="container wide">
+          <footer>
+            <div class="row footer">
+            <div class="col-md-6">
+                              <!--<p class="text-left ">Thanks to <a href="http://jinpark.net">Jin</a> and <a href="http://www.hassanabid.com">Hassan</a></p>-->
                 <p class="text-left"> Made by <a href="http://www.rachellcalhoun.com">Rachell Calhoun</a> using bootstrap</p>
-
-              <ul class="text-right list-inline" style="none">
-                <li><a href="https://www.linkedin.com/pub/rachell-calhoun/5a/352/79"><span><i class="fa fa-linkedin-square" alt="LinkedIn"></i></span></a></li>
-                <li><a href="mailto:rachell.calhoun@gmail.com"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></li>
-                <li><a href="https://github.com/RachellCalhoun" class="github"> <span><i class="fa fa-github" alt ="Github"></i></span></a></li>
+                </div>
+                <div class="col-md-6">
+                <ul class="text-right list-inline" style="none">
+                  <li><a href="https://www.linkedin.com/pub/rachell-calhoun/5a/352/79"><span><i class="fa fa-linkedin-square" alt="LinkedIn"></i></span></a></li>
+                  <li><a href="mailto:rachell.calhoun@gmail.com"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span></a></li>
+                  <li><a href="https://github.com/RachellCalhoun" class="github"> <span><i class="fa fa-github" alt ="Github"></i></span></a></li>
                 </ul>
-              </div>
+                </div>
+            </div><!--row footer-->
+            </footer>
         </div>
-      </footer>
-
-      </div><!-- /.container (for footer) -->
 
 
     <!-- Bootstrap core JavaScript
