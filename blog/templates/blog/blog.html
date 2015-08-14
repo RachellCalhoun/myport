@@ -81,7 +81,7 @@
         <div class="border">
 
         {%if entry.img %} <img class = "img-responsive img-rounded blogimage" src="{{entry.img.url}}">  {% endif %}
-        <p class="blogcontent"> {{entry.content}}</p>
+        <p class="blogcontent"> {{entry.content|safe}}</p>
         {%if entry.resource%}<a class= "resource" href="entry.resource">{{entry.resource}}</a>{%endif%}
         <p class="published"> Published: {{entry.date}}</p>
 
@@ -92,6 +92,7 @@
       <div class="col-md-2"></div>
     </div>
   </div><!--close container-->
+  
       <hr class="featurette-divider"></hr>
         <div class="container">
           <footer>
