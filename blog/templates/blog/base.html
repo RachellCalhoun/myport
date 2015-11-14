@@ -17,7 +17,8 @@
     <!-- Custom styles for this template -->
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-    <link type="text/css" rel="stylesheet" href="{% static 'blog/blog.css'%}"/>
+    <link rel="stylesheet" href="{% static "css/blog.css" %}">
+
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
@@ -34,7 +35,6 @@
 
     <div class="navbar-wrapper">
       <div class="container">
-
         <nav class="navbar navbar-inverse navbar-static-top">
           <div class="container">
             <div class="navbar-header">
@@ -66,33 +66,11 @@
       </div><!--container-->
     </div><!--navbar wrapper-->
       <hr class="featurette-divider"></hr>
-      <h1 class="blog text-center">My thoughts on some things</h1>
-        <div class="container main">
-        <hr class="featurette-divider"></hr>
-    <div class="row">
-
-      <div class="col-md-2"></div>
-      <div class="col-md-8 content">
+      
+      {% block content %}
+      {% endblock %}
 
 
-        {% for entry  in  blogentries %}
-
-        <h3 class= "title">{{entry.title}}</h3>
-        <div class="border">
-
-        {%if entry.img %} <img class = "img-responsive img-rounded blogimage" src="{{entry.img.url}}">  {% endif %}
-        <p class="blogcontent"> {{entry.content|safe}}</p>
-        {%if entry.resource%}<a class= "resource" href="entry.resource">{{entry.resource}}</a>{%endif%}
-        <p class="published"> Published: {{entry.date}}</p>
-
-        </div>
-        {% endfor %}
-
-      </div><!--close row-->
-      <div class="col-md-2"></div>
-    </div>
-  </div><!--close container-->
-  
       <hr class="featurette-divider"></hr>
         <div class="container">
           <footer>
