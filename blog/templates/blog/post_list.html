@@ -1,5 +1,11 @@
 
 {% extends "blog/base.html" %}
+{% block menu %}
+<li><a href="/" >Home</a></li>
+<li><a href="/portfolio" >Portfolio</a></li>
+<li><a href="/skills" >Skills</a></li>
+<li  class ="active"><a href="/blog" >Blog</a></li>
+{% endblock %}
 {% block content%}
 
       <h1 class="blog text-center">My thoughts on some things</h1>

@@ -48,11 +48,10 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav navbar col-md-6">
+{% block menu %}
+                
+                {% endblock %}
 
-                <li><a href="/" >Home</a></li>
-                <li><a href="/portfolio" >Portfolio</a></li>
-                <li><a href="/skills" >Skills</a></li>
-                <li  class ="active"><a href="/blog" >Blog</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right right">
                 <li><a href="https://www.linkedin.com/pub/rachell-calhoun/5a/352/79"><span><i class="fa fa-linkedin-square" alt="LinkedIn"></i></span></a></li>
@@ -66,7 +65,7 @@
       </div><!--container-->
     </div><!--navbar wrapper-->
       <hr class="featurette-divider"></hr>
-      
+
       {% block content %}
       {% endblock %}
 
