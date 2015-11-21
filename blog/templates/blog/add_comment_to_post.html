@@ -6,17 +6,22 @@
 <li  class ="active"><a href="/blog" >Blog</a></li>
 {% endblock %}
 {% block content %}
-
-<div class="row">
-
-<div class="col-md-2"></div>
-<div class="col-md-8 content">
-    <h1>New Comment</h1>
-    <p>Let's keep it positive ;)</p>
+<h1 class= "blog text-center">{{ post.title }}</h1>
+  
+    <div class="container addcommentmain">
+    <hr class="featurette-divider"></hr>
+    <div class="row">
+    
+      <div class="col-md-2"></div>
+      <div class="col-md-8 content">
+      <h3 class="title">New Comment</h3>
     <form method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Submit Comment</button>
+        <button type="submit" class="addcommentbtn save btn btn-default">Submit Comment</button>
     </form>
-  </div>
-</div>
+   	</div><!--close 8col-->
+     <div class="col-md-2"></div>
+    </div><!--close row-->
+  	</div><!--close container-->
+
 {% endblock %}
