@@ -21,7 +21,7 @@
         <a href="{% url 'post_draft_list' %}" class="top-menu"><span class="glyphicon glyphicon-edit"></span></a>
         {% endif %}
         {% for post  in  posts %}
-        <h1 class="title"><a href="{% url "post_detail" pk=post.pk %}">{{ post.title }}</a></h1>
+        <h1 class="posttitle"><a href="{% url "post_detail" pk=post.pk %}">{{ post.title }}</a></h1>
         <p class="published"> Published: {{post.published_date}}</p>
         <div class="border">
 
