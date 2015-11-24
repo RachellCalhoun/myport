@@ -1,6 +1,0 @@
-blog/*.pyc
-*.DS_STORE
-*.pyc
-__pycache__
-myvenv
-db.sqlite3
