@@ -13,12 +13,13 @@
       <div class="col-md-2"></div>
         <div class="col-md-8 text-center">
           <h1 class="title">{{ post.title }}</h1>
+          <p><a href="/blog">Back</a></p>
         </div>
         </div><!--close row-->
 
       <div class="row">
         <div class="col-md-2"></div>
-          <div class="col-md-8 border">
+          <div class="col-md-8 border main">
 
           {%if post.img %} <img class = "img-responsive img-rounded blogimage" src="{{post.img.url}}">  {% endif %}
           <p class="blogcontent">{{ post.text|safe }}</p>
