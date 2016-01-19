@@ -18,23 +18,23 @@
       <!-- Three columns of text below the carousel -->
       {% for entry  in  skillentries %}
         {% if forloop.counter0|divisibleby:2 %}
-      <div class="row">
-      <div class="col-lg-2"></div>
-        <div class="col-lg-4">
-          {%if entry.img %}<img class="img-circle" src="{{entry.img.url}}" alt="Generic placeholder image" width="140" height="140">{% endif %}
+      <div class="row skill-row">
+      
+        <div class="col-sm-6 text-center">
+          {%if entry.img %}<img class="img-circle center-block img-responsive " align="middle"src="{{entry.img.url}}" alt="Generic placeholder image" width="140" height="140">{% endif %}
           <h2>{{entry.title}}</h2>
           <p>{{entry.description}}</p>
           {%if entry.resource%}<p><a class= "resource" href="{{entry.resource}}">{{entry.resource}}</a></p>{%endif%}
         </div><!-- /.col-lg-6 -->
-        <div cass="col-lg-4"></div>
+        <div cass="col-sm-6"></div>
         {% else %}
-        <div class="col-lg-4">
-          {%if entry.img %}<img class="img-circle" src="{{entry.img.url}}" alt="Generic placeholder image" width="140" height="140">{% endif %}
+        <div class="col-sm-6 text-center">
+          {%if entry.img %}<img class="center-block img-circle img-responsive" src="{{entry.img.url}}" alt="Generic placeholder image" width="140" height="140">{% endif %}
           <h2>{{entry.title}}</h2>
           <p>{{entry.description}}</p>
           {%if entry.resource%}<p><a class= "resource" href="{{entry.resource}}">{{entry.resource}}</a></p>{%endif%}
         </div><!-- /.col-lg-6 -->
-        <div class="col-lg-2"></div>
+        
 
       </div><!-- /.row -->
       {%endif%}

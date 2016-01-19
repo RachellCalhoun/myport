@@ -9,7 +9,7 @@ body {
 .main {
   min-height:400px;
   padding:2em;
-
+  margin-top: 1em;
   margin-bottom:1em;
 }
 
@@ -38,21 +38,10 @@ body {
 }
 
 
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
-
-/* Carousel base class */
-
-/* MARKETING CONTENT
--------------------------------------------------- */
-
-/* Center align the text within the three columns below the carousel */
 .title{
 	padding:0px;
 }
 
-/* Featurettes
-------------------------- */
 a {
 	color:gray;
 	font-style: none;
@@ -63,7 +52,7 @@ a {
 	max-height: 600px;
 }
 .featurette-divider {
-  margin: 10px 0; /* Space out the Bootstrap <hr> more */
+  margin: 20px 0; /* Space out the Bootstrap <hr> more */
 }
 .long {
 	margin:10px;
